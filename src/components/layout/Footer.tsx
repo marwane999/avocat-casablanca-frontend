@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <img
-              src="/images/logo.jpg"
+              src="/images/logo.png"
               alt="Avocat Casablanca"
               className="h-14 w-auto mb-4"
             />

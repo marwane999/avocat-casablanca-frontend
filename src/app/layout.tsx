@@ -29,7 +29,7 @@ const jsonLd = {
   },
   knowsLanguage: ['fr', 'ar'],
   priceRange: '$$',
-  image: `${siteConfig.url}/images/logo.jpg`,
+  image: `${siteConfig.url}/images/logo.png`,
 };
 
 export const metadata: Metadata = {
