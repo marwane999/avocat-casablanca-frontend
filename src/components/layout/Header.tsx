@@ -19,11 +19,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-2 sm:gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.png"
               alt="Avocat Casablanca"
-              className="h-14 sm:h-12 w-auto"
+              className="h-12 w-auto"
             />
             <div className="hidden sm:block">
               <p className="text-white font-playfair text-lg font-semibold leading-tight">

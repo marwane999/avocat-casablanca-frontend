@@ -15,7 +15,7 @@ export default function HeroSection() {
           backgroundImage: `url('https://image.jimcdn.com/app/cms/image/transf/dimension=1920x10000:format=jpg/path/sd1b0153e8d408d57/image/i4d99293713493bd0/version/1627457207/image.jpg')`,
         }}
       />
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -23,35 +23,21 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block bg-accent/20 text-accent px-4 py-1 text-sm font-semibold mb-6">
-              Cabinet d&apos;Avocats à Casablanca depuis 1979
+              Depuis 1979 • Barreau de Casablanca
             </div>
-            <div className="text-white/80 text-base sm:text-lg leading-relaxed space-y-5">
-              <p>
-                Le cabinet ELKHORASSANI est l&apos;un des principaux cabinets d&apos;avocats
-                d&apos;affaires à Casablanca au Maroc. Le cabinet vise l&apos;excellence et
-                s&apos;applique à résoudre chacune des affaires qui lui sont confiées
-                avec la plus grande attention.
-              </p>
-              <p>
-                Le cabinet a bâti sa réputation sur les engagements forts et solides
-                qu&apos;il assure à ses clients. Nous accordons une grande importance
-                à l&apos;établissement d&apos;une relation de confiance basée sur l&apos;intégrité,
-                la fidélité et l&apos;engagement.
-              </p>
-              <p>
-                Depuis 1979, nous fournissons des conseils personnalisés aux
-                particuliers et professionnels. Notre objectif est de vous assister
-                dans la compréhension de vos droits et des problématiques liées
-                à votre situation.
-              </p>
-            </div>
-            <div className="border-l-4 border-accent pl-4 italic text-lg sm:text-xl text-white font-playfair mt-8">
-              &ldquo;Le Cabinet ELKHORASSANI fait UN avec son Client&rdquo;
-            </div>
-            <div className="flex flex-wrap gap-4 mt-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Votre Avocat à Casablanca<br />
+              <span className="text-accent">depuis 1979</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
+              Cabinet d&apos;avocats spécialisé en droit des affaires, droit civil, 
+              droit immobilier et droit de la famille. Une expertise reconnue 
+              au service de vos droits au Maroc.
+            </p>
+            <div className="flex flex-wrap gap-4">
               <Link href="/demande-de-devis">
                 <Button variant="default" size="lg">
-                  Demande de Devis
+                  Prendre Rendez-vous
                 </Button>
               </Link>
               <Link href="/domaines-de-competences">
@@ -60,13 +46,12 @@ export default function HeroSection() {
                 </Button>
               </Link>
             </div>
-            <div className="mt-6">
-              <Link
-                href="/contact"
-                className="text-white/50 hover:text-accent text-sm transition-colors"
-              >
-                En savoir plus sur le Cabinet →
-              </Link>
+            <div className="mt-8 flex items-center gap-4 text-white/50 text-sm">
+              <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-2 hover:text-accent transition-colors">
+                📞 {siteConfig.phone}
+              </a>
+              <span className="hidden sm:inline">•</span>
+              <span className="hidden sm:inline">Réponse sous 24h</span>
             </div>
           </motion.div>
 
@@ -74,18 +59,20 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:flex flex-col gap-6"
+            className="hidden lg:flex flex-col gap-4"
           >
-            <div className="aspect-[4/3] overflow-hidden rounded shadow-xl">
-              <img
-                src="https://image.jimcdn.com/app/cms/image/transf/dimension=900x10000:format=jpg/path/sd1b0153e8d408d57/image/i4d99293713493bd0/version/1627457207/image.jpg"
-                alt="Cabinet ELKHORASSANI - Avocat Casablanca"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="bg-accent/20 backdrop-blur-sm p-6 rounded shadow-lg text-center">
-              <p className="text-4xl font-bold text-accent">1979</p>
-              <p className="text-white/80 text-sm font-semibold mt-1">Année de fondation</p>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: '45+', label: "Années d'expérience" },
+                { value: '17', label: 'Domaines de compétence' },
+                { value: '1000+', label: 'Dossiers traités' },
+                { value: '24h', label: 'Réponse garantie' },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm p-6 text-center rounded">
+                  <p className="text-3xl font-bold text-accent">{stat.value}</p>
+                  <p className="text-white/60 text-sm mt-1">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>
