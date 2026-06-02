@@ -23,13 +23,13 @@ export default function Header() {
             <img
               src="/images/logo.png"
               alt="Avocat Casablanca"
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
             />
-            <div className="hidden sm:block">
-              <p className="text-white font-playfair text-lg font-semibold leading-tight">
+            <div>
+              <p className="text-white font-playfair text-sm sm:text-lg font-semibold leading-tight">
                 Me ELKHORASSANI AHMED
               </p>
-              <p className="text-accent text-xs">
+              <p className="text-accent text-[10px] sm:text-xs">
                 Avocat au Barreau de Casablanca (1979)
               </p>
             </div>
